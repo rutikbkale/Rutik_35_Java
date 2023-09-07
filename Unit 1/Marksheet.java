@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 
 class MarksheetEx {
@@ -24,7 +25,7 @@ class MarksheetEx {
         total = marks1 + marks2 + marks3;
         percentage = (float) total / 3;
        
-        System.out.println(rollno + "\t" + name +  "\t" + marks1 + "\t" + marks2 + "\t" + marks3 + "\t" + total + "\t" + percentage + "\t\t" + displayGrade(percentage));
+        System.out.println(rollno + "\t" + name +  "\t" + marks1 + "\t" + marks2 + "\t" + marks3 + "\t" + total + "\t" + String.format("%.2f", percentage) + "\t\t" + displayGrade(percentage));
     }
 
     public static String displayGrade(float percentage) {
@@ -76,11 +77,12 @@ class Marksheet {
         }
         
          System.out.println("\n\n                                    STUDENT MARKSHEET");
-        System.out.println("**************************************************************************\n\n");
+        System.out.println("************************************************************************************\n\n");
         System.out.println("RollNo\tName\t\tMarks1\tMarks2\tMarks3\tTotal\tPercentage\tGrade\n");
         for (int i = 0; i < noStudent; i++) {
                 obj[i].displayMarksheet();
         }
-        System.out.println("**************************************************************************");
+	System.out.println();
+        System.out.println("************************************************************************************");
     }
 }
