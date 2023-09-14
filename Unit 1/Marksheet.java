@@ -22,9 +22,28 @@ class MarksheetEx {
     public void displayMarksheet() {
         total = marks1 + marks2 + marks3;
         percentage = (float) total / 3;
-       
-        System.out.println(rollno + "\t" + name +  "\t" + marks1 + "\t" + marks2 + "\t" + marks3 + "\t" + total + "\t" + String.format("%.2f", percentage) + "\t\t" + displayGrade(percentage));
+        if(percentage>=85 && percentage<100){
+		System.out.println("\n                                    Distinction Student");
+        	System.out.println("************************************************************************************\n\n");
+              	System.out.println(rollno + "\t" + name +  "\t" + marks1 + "\t" + marks2 + "\t" + marks3 + "\t" + total + "\t" + String.format("%.2f", percentage) + "\t\t" + displayGrade(percentage));
+	}
+	else if(percentage>=60 && percentage<85){
+		System.out.println("\n                                    First Class Student");
+        	System.out.println("************************************************************************************\n\n");
+              	System.out.println(rollno + "\t" + name +  "\t" + marks1 + "\t" + marks2 + "\t" + marks3 + "\t" + total + "\t" + String.format("%.2f", percentage) + "\t\t" + displayGrade(percentage));
+	}
+	else if(percentage>=40 && percentage<60){
+		System.out.println("\n                                    Second Class Student");
+        	System.out.println("************************************************************************************\n\n");
+              	System.out.println(rollno + "\t" + name +  "\t" + marks1 + "\t" + marks2 + "\t" + marks3 + "\t" + total + "\t" + String.format("%.2f", percentage) + "\t\t" + displayGrade(percentage));
+	}
+	else{
+		System.out.println("\n                                    Fail Student");
+        	System.out.println("************************************************************************************\n\n");
+              	System.out.println(rollno + "\t" + name +  "\t" + marks1 + "\t" + marks2 + "\t" + marks3 + "\t" + total + "\t" + String.format("%.2f", percentage) + "\t\t" + displayGrade(percentage));
+	}
     }
+
 
     public static String displayGrade(float percentage) {
         if (percentage >= 85) {
@@ -78,7 +97,7 @@ class Marksheet {
         System.out.println("************************************************************************************\n\n");
         System.out.println("RollNo\tName\t\tMarks1\tMarks2\tMarks3\tTotal\tPercentage\tGrade\n");
         for (int i = 0; i < noStudent; i++) {
-                obj[i].displayMarksheet();
+                obj[i].displayMarksheet(); 
         }
 	System.out.println();
         System.out.println("************************************************************************************");
