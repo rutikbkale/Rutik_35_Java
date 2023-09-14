@@ -20,12 +20,12 @@ class Part{
 
 	public void innerVolume(){
 		calVolume = (3.142*s1*s2*s3)/3;
-		System.out.println("Volume of inner part of the Machine is : "+calVolume);
+		System.out.println("Volume of inner part of the Machine is : "+String.format("%.4f",calVolume));
 	}
 
 	public void outerVolume(){
 		calVolume = 4*(3.142*s1*s2*s3)/3;
-		System.out.println("Volume of outer part of the Machine is : "+calVolume);
+		System.out.println("Volume of outer part of the Machine is : "+String.format("%.4f",calVolume));
 	}
 }
 
