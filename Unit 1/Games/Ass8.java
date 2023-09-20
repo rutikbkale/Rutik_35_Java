@@ -1,5 +1,6 @@
+package Games;
 import java.util.Scanner;
-import Games.*;
+//import Games.*;
 
 public class Ass8{
 	static Scanner sc = new Scanner(System.in);
