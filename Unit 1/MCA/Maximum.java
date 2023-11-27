@@ -21,4 +21,12 @@ public class Maximum{
 			System.out.println("All Numbers are equal.");
 		}
 	}
+
+	
+	protected void finalize(){
+		a = 0.0f;
+		b = 0.0f;
+		c = 0.0f;
+	}
+
 }

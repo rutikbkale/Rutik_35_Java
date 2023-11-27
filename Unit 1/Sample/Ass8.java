@@ -1,11 +1,11 @@
-package Games;
+package Sample;
 import java.util.Scanner;
-//import Games.*;
+import Games.*;
 
 public class Ass8{
-	static Scanner sc = new Scanner(System.in);
-
+	
 	public static void main(String arg[]){
+		Scanner sc = new Scanner(System.in);
 		int noStudent;
 		String name;
 
@@ -38,6 +38,6 @@ public class Ass8{
 			out[i].displayName();
 		}
 		
-		
+		sc.close();
 	}
 }

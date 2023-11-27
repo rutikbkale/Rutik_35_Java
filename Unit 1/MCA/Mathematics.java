@@ -1,7 +1,3 @@
-/*
-Write a program to create a package MCA inside that create two classes first is Mathematics and second is Maximum and using finalize method.
-*/
-
 package MCA;
 
 public class Mathematics{
@@ -11,7 +7,7 @@ public class Mathematics{
 		this.a = a;
 		this.b = b;
 		add= a+b;
-		System.out.println("Addition is : "+add);
+		System.out.println("Addition of 2 Numbers are : "+add);
 	}
 
 	public void toAdd(float a, float b,float c){
@@ -19,6 +15,13 @@ public class Mathematics{
 		this.b = b;
 		this.c = c;
 		add= a+b+c;
-		System.out.println("Addition is : "+add);
+		System.out.println("Addition of 3 Numbers are : "+add);
 	}
+	
+	
+	protected void finalize(){
+		a = 0.0f;
+		b = 0.0f;
+		c = 0.0f;
+		}
 }

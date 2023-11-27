@@ -20,12 +20,9 @@ public class Ass7{
 
 		obj2.toMaximum(a,b,c);	
 
+		obj1=null;
+		obj2=null;
 		System.gc();	
 	}	
 
-	protected void finalize(){
-		a = 0.0f;
-		b = 0.0f;
-		c = 0.0f;
-	}
 }

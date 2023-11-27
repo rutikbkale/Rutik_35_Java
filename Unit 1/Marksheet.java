@@ -1,5 +1,48 @@
 import java.util.Scanner;
 
+class Marksheet {
+
+    public static void main(String arg[]) {
+        Scanner sc = new Scanner(System.in);
+        int r, m1, m2, m3, noStudent;
+        String name;
+        String a;
+
+        System.out.println("Enter Number of Student : ");
+        noStudent = sc.nextInt();
+        MarksheetEx obj[] = new MarksheetEx[noStudent];
+        for (int i = 0; i < noStudent; i++) {
+            System.out.println("******************************");
+            System.out.println("\n Enter " + (i+1) + " Student Information : \n");
+            System.out.println("Enter Student Roll Number : ");
+            r = sc.nextInt();
+            System.out.println("Enter Student Name : ");
+            a = sc.nextLine();
+            name = sc.nextLine();
+            System.out.println("Enter First Subject Marks : ");
+            m1 = sc.nextInt();
+            System.out.println("Enter Second Subject Marks : ");
+            m2 = sc.nextInt();
+            System.out.println("Enter Third Subject Marks : ");
+            m3 = sc.nextInt();
+            System.out.println("******************************");
+
+           obj[i] = new MarksheetEx(r, name, m1, m2, m3);
+           
+        }
+        
+         System.out.println("\n\n                                    STUDENT MARKSHEET");
+        System.out.println("************************************************************************************\n\n");
+        System.out.println("RollNo\tName\t\tMarks1\tMarks2\tMarks3\tTotal\tPercentage\tGrade\n");
+        for (int i = 0; i < noStudent; i++) {
+                obj[i].displayMarksheet(); 
+        }
+	System.out.println();
+        System.out.println("************************************************************************************");
+    }
+}
+
+
 class MarksheetEx {
 
     private final int rollno;
@@ -62,44 +105,3 @@ class MarksheetEx {
     }
 }
 
-class Marksheet {
-
-    public static void main(String arg[]) {
-        Scanner sc = new Scanner(System.in);
-        int r, m1, m2, m3, noStudent;
-        String name;
-        String a;
-
-        System.out.println("Enter Number of Student : ");
-        noStudent = sc.nextInt();
-        MarksheetEx obj[] = new MarksheetEx[noStudent];
-        for (int i = 0; i < noStudent; i++) {
-            System.out.println("******************************");
-            System.out.println("\n Enter " + (i+1) + " Student Information : \n");
-            System.out.println("Enter Student Roll Number : ");
-            r = sc.nextInt();
-            System.out.println("Enter Student Name : ");
-            a = sc.nextLine();
-            name = sc.nextLine();
-            System.out.println("Enter First Subject Marks : ");
-            m1 = sc.nextInt();
-            System.out.println("Enter Second Subject Marks : ");
-            m2 = sc.nextInt();
-            System.out.println("Enter Third Subject Marks : ");
-            m3 = sc.nextInt();
-            System.out.println("******************************");
-
-           obj[i] = new MarksheetEx(r, name, m1, m2, m3);
-           
-        }
-        
-         System.out.println("\n\n                                    STUDENT MARKSHEET");
-        System.out.println("************************************************************************************\n\n");
-        System.out.println("RollNo\tName\t\tMarks1\tMarks2\tMarks3\tTotal\tPercentage\tGrade\n");
-        for (int i = 0; i < noStudent; i++) {
-                obj[i].displayMarksheet(); 
-        }
-	System.out.println();
-        System.out.println("************************************************************************************");
-    }
-}

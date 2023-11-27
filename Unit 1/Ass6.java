@@ -1,5 +1,21 @@
 import java.util.Scanner;
 
+public class Ass6{
+	public static void main(String a[]){
+		Scanner sc = new Scanner(System.in);
+		int s1,s2,s3;
+
+		System.out.println("Enter the 3 sides of part of the Machine : ");
+		s1 = sc.nextInt();
+		s2 = sc.nextInt();
+		s3 = sc.nextInt();
+
+		Part obj = new Part(s1,s2,s3);
+		obj.innerVolume();
+		obj.outerVolume();
+	}
+}
+
 interface Volume{
 	public void innerVolume();
 	public void outerVolume();
@@ -29,18 +45,3 @@ class Part{
 	}
 }
 
-public class Ass6{
-	public static void main(String a[]){
-		Scanner sc = new Scanner(System.in);
-		int s1,s2,s3;
-
-		System.out.println("Enter the 3 sides of part of the Machine : ");
-		s1 = sc.nextInt();
-		s2 = sc.nextInt();
-		s3 = sc.nextInt();
-
-		Part obj = new Part(s1,s2,s3);
-		obj.innerVolume();
-		obj.outerVolume();
-	}
-}
