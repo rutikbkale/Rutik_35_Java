@@ -12,14 +12,12 @@ class Ass3 extends Canvas{
 
 		for(int i=10; i>0; i--){
 			g.drawOval(x-(15*i),y-(15*i),radius,radius);
-			if(i%2==0){
+			if(i%2==0)
 				g.setColor(Color.RED);
-			}
 			else
 				g.setColor(Color.BLUE);
 			g.fillOval(x-(15*i),y-(15*i),radius,radius);
 			radius -=30;
-			
 		}
 	}
 
