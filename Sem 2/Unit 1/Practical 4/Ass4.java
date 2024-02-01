@@ -5,8 +5,8 @@ import java.util.*;
 import java.io.*;
 
 class Ass4{
-	public static void main(String arg[]) throws MalformedURLException, IOException{
-		URL url = new URL("http://pc23/E:/Rutik_35/Practical 1/Ass4.java");
+	public static void main(String arg[]) throws Exception{
+		URL url = new URL("http://localhost:80/index.html");
 		URLConnection con = url.openConnection();
 		System.out.println("Date is : "+new Date(con.getDate()));
 		System.out.println("Content type is : "+con.getContentType());
